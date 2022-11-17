@@ -1,7 +1,7 @@
 
 .teksts h1{
     text-align:left;
-    margin-top:35%;
+    margin-top:45%;
     font-size:55px;
     font-weight:bold;
 }
@@ -12,17 +12,24 @@
     font-family:arial;
     margin-top:5%;
     letter-spacing: 2px;
+    font-weight: bold;
 }
 
-.poga-w a{
+.button {
+    background-color: rgb(77, 76, 76);
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
     font-weight:bold;
-    margin-top:5%;
-}
+    box-shadow: 2px 2px black;
+  }
 
-.poga-w p {
-    text-align:left;
-    font-family:arial;
-    font-size:12px;
-    letter-spacing: 2px;
-    margin-top:5px;
+.img-main{
+    margin-left:25%;
+    margin-top:5%;
 }
