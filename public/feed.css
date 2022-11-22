@@ -1,0 +1,31 @@
+
+.imgbox{
+    height: 400px;
+    width: 300px;
+    background-color: black;
+    border-radius: 15px 15px 15px 15px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:5px;
+}
+
+.undertext p{
+    margin-left:33%;
+    font-weight:bold;
+}
+.emote{
+    margin-top:5px;
+    margin-left:33%;
+}
+.emote button{
+    margin-left:37%;
+}
+.undertext a {
+    color:black;
+}
+
+.more p{
+    font-size:10px;
+    color:gray;
+    margin-top:-10px;
+}
