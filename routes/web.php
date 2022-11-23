@@ -22,3 +22,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::get('/feed', [App\Http\Controllers\FeedController::class, 'index'])->name('feed');
+
+Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
