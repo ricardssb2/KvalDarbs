@@ -68,12 +68,13 @@
 .order-card{
     width: 500px;
     height: 200px;
-    background-color:rgba(255, 0, 0, 0);
+    background-color:rgba(58, 56, 59, 0.13);
     margin-top:40px;
+    border-radius: 5px 5px 5px 5px;
 }
 
 .order-card-img{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     height: 200px;
 }
 
@@ -86,7 +87,7 @@
 
 .order-card-desc{
     height: 200px;
-    background-color: orange;
+    background-color: rgba(255, 166, 0, 0);
 }
 
 .x-poga{
@@ -95,4 +96,15 @@
 
 .x-poga:active{
     border:none;
+}
+
+.pirmietris{
+    font-size:15px;
+    margin-left:10px;
+}
+
+.cena{
+    text-align:right;
+    font-weight: bold;
+    font-size:15px;
 }

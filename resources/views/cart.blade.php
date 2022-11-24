@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="<?php echo asset('/cart.css')?>" type="text/css"> 
 @section('content')
     <div class="virsraksts">
-        <!-- <h1>Your Cart</h1> -->
+       <h1>Your Cart</h1>
     </div>
     <div class="container">
     <div class="row">
@@ -12,14 +12,24 @@
                 <div class="col-3 order-card-img">
                     <img src="https://images.saatchiart.com/saatchi/821958/art/7606759/6675349-HSC00001-6.jpg" alt="">
                 </div>
-                <div class="col-2">
+                <div class="col-1">
                 </div>
-                <div class="col-7 order-card-desc">
+                <div class="col-8 order-card-desc">
                  <div class="x-poga">
                     <button type="button" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                     <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
                     </svg></button>
                  </div>
+                    <div class="descetc">
+                        <div class="pirmietris">
+                            <p><b>Author:</b> Ričards Daniēls Belkovskis</p>
+                            <p><b>Art Name:</b> Uzmetu Krāsu</p>
+                            <p><b>Art Description:</b> Krāsa uzmesta neko nesaprot.</p>
+                        </div>
+                        <div class="cena">
+                            <p>3231.21$</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -44,7 +54,7 @@
                 <p>SUBTOTAL:  <u>3243.44$</u></p>
             </div>
             <div class="poga-end">
-                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-dark">Success</button>
             </div>
         </div>
     </div>
