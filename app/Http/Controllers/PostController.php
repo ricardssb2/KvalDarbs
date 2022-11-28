@@ -24,4 +24,10 @@ class PostController extends Controller
     {
         return view('post');
     }
+
+    public function create_posts(Request $request)
+    {
+        $this->validate($request, [
+         ]);
+    }
 }
