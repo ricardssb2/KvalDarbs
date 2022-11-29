@@ -2,9 +2,10 @@
 <link rel="stylesheet" href="<?php echo asset('/post.css')?>" type="text/css"> 
 
 @section('content')
-<form>
-    <form>
-        <div method="POST" action="{{ route('post') }}">
+
+    <form method="post" action="{{url('newpost')}}">
+        <div >
+          @csrf
             <label for="exampleFormControlTextarea1">Art Name</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" name="product_name" rows="1"></textarea>
           </div>

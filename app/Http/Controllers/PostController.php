@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \App\Models\CreatePost;
 
 class PostController extends Controller
 {
@@ -26,8 +27,12 @@ class PostController extends Controller
     }
 
     public function create_posts(Request $request)
-    {
-        $this->validate($request, [
-         ]);
+    {   
+        $post = new CreatePost;
+        $post->product_name = $request->product_name;
+        $post->product_price = $request->product_price;
+        $post->product_description = $request->product_description;
+        $post->save();
+        return redirect('feed')->with('status', 'Blog Post Form Data Has Been inserted');
     }
 }

@@ -24,5 +24,5 @@ Route::get('/feed', [App\Http\Controllers\FeedController::class, 'index'])->name
 
 Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
 
-Route::get('/post', [App\Http\Controllers\PostController::class, 'index'])->name('post');
-Route::post('/post', [App\Http\Controllers\PostController::class, 'create_posts']);
+Route::get('/post', [App\Http\Controllers\PostController::class, 'index']);
+Route::post('/newpost', [App\Http\Controllers\PostController::class, 'create_posts']);

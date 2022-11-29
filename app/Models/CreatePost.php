@@ -14,7 +14,8 @@ class CreatePost extends Model
      *
      * @var array<int, string>
      */
-    protected $fillable = [
+protected $fillable = [
+
         'product_name',
         'product_price',
         'product_description',
