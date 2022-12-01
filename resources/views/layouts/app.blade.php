@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<link rel="stylesheet" href="<?php echo asset('/app.css')?>" type="text/css"> 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,11 +40,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
+                        
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -58,6 +59,42 @@
                                 </li>
                             @endif
                         @else
+                        <div class="box-but">
+                            <a class="button" href="#popup1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                              </svg></a>
+                        </div>
+                            <div id="popup1" class="overlay">
+                                <div class="popup">
+                                    <div class="pop-virsraksts">
+                                        <h2>ADD A POST</h2>
+                                    </div>
+                                    <div class="photo">
+                                        <input type="file" class="form-control" name="image" />
+                                    </div>
+                                    <a class="close" href="#">&times;</a>
+                                    <div class="content">
+                                        <form method="post" action="{{url('newpost')}}">
+                                            <div>
+                                              @csrf
+                                                <label for="exampleFormControlTextarea1">Art Name</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" name="product_name" rows="1"></textarea>
+                                              </div>
+                                              <div class="form-group">
+                                                <label for="exampleFormControlTextarea1">Art Price</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" name="product_price" rows="1"></textarea>
+                                              </div>
+                                            <div class="form-group">
+                                              <label for="exampleFormControlTextarea1">Art Description</label>
+                                              <textarea class="form-control description" id="exampleFormControlTextarea1" name="product_description" rows="3"></textarea>
+                                            </div>
+                                            <div class="submit">
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </div>
+                                          </form>
+                                    </div>
+                                </div>
+                            </div>   
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

@@ -28,6 +28,7 @@ class PostController extends Controller
 
     public function create_posts(Request $request)
     {   
+        
         $post = new CreatePost;
         $post->product_name = $request->product_name;
         $post->product_price = $request->product_price;

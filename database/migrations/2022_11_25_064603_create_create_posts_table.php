@@ -31,4 +31,6 @@ class CreateCreatePostsTable extends Migration
     {
         Schema::dropIfExists('create_posts');
     }
+
+    
 }
