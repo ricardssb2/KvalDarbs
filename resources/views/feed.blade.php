@@ -4,8 +4,8 @@
 @section('content')
 <div class="container">
     <div class="row">
-      <div class="col-2">
-        One of three columns
+      <div class="col-2 kreisa-puse">
+        test
       </div>
       <div class="col-8">
         <div class="feedpost">
@@ -34,8 +34,8 @@
             </div>
         </div>
       </div>
-      <div class="col-2">
-        One of three columns
+      <div class="col-2 laba-puse">
+        Test
       </div>
     </div>
   </div>
