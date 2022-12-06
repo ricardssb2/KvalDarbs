@@ -1,31 +1,52 @@
 
+.visskopa{
+    width:400px;
+    height: 800px;
+    float:left;
+    margin-left:3%
+}
 .imgbox{
     height: 400px;
     width: 300px;
     background-color: black;
     border-radius: 15px 15px 15px 15px;
+    margin-top:5px;
     margin-left:auto;
     margin-right:auto;
+
+}
+
+.undertext{
+    width:300px;
+    height: 300px;
+    margin-right: auto;
+    margin-left:auto;
+}
+
+.emote{
     margin-top:5px;
 }
 
-.undertext p{
-    margin-left:33%;
-    font-weight:bold;
-}
-.emote{
-    margin-top:5px;
-    margin-left:33%;
-}
-.emote button{
-    margin-left:37%;
-}
 .undertext a {
     color:black;
 }
 
-.more p{
-    font-size:10px;
-    color:gray;
-    margin-top:-10px;
+.art-name{
+    font-weight: bold;
+    margin-top:5px;
 }
+
+.art-price{
+    text-align:right;
+    font-weight: bold;
+}
+
+.art-description{
+    width:100%;
+    height: 200px;
+}
+.cart-button{
+    position:absolute;
+    margin-left:250;
+}
+

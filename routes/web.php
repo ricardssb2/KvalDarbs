@@ -26,3 +26,8 @@ Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name
 
 Route::get('/post', [App\Http\Controllers\PostController::class, 'index']);
 Route::post('/newpost', [App\Http\Controllers\PostController::class, 'create_posts']);
+
+Route::get('feed', function (){
+    $feed_list = DB::table('create_posts')->get();
+    return view('feed',['feed_list' => $feed_list]);
+});

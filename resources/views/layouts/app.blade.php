@@ -106,7 +106,6 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('feed') }}">Feed</a>
                                     <a class="dropdown-item" href="{{ route('cart') }}">Cart</a>
                                     <a class="dropdown-item" href="{{ route('cart') }}">Profile</a>
 
