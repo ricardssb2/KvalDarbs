@@ -106,8 +106,8 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('cart') }}">Cart</a>
-                                    <a class="dropdown-item" href="{{ route('cart') }}">Profile</a>
+                                    <a class="dropdown-item" href="{{ route('cart') }}">Cart</a>    
+                                    <a class="dropdown-item" href="{{ route('home') }}">Profile</a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
