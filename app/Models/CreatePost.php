@@ -19,5 +19,6 @@ protected $fillable = [
         'product_name',
         'product_price',
         'product_description',
+        'author_id',
     ];
 }

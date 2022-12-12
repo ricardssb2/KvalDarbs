@@ -18,7 +18,10 @@ class CreateCreatePostsTable extends Migration
             $table->string('product_name', 64);
             $table->float('product_price');
             $table->string('product_description');
+            $table->unsignedBigInteger('author_id');
             $table->timestamps();
+            $table->foreign('author_id')->references('id')->on('users');
+            
         });
     }
 

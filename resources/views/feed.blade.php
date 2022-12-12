@@ -5,6 +5,7 @@
 
             @foreach($feed_list as $key => $data)
 <div class="visskopa">
+            <div class="usernmae"></div>
             <div class="imgbox"></div>
             <div class="undertext">
                 <div class="emote">
