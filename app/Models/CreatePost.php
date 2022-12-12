@@ -20,5 +20,6 @@ protected $fillable = [
         'product_price',
         'product_description',
         'author_id',
+        'image_path',
     ];
 }

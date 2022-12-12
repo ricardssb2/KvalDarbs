@@ -6,7 +6,7 @@
             @foreach($feed_list as $key => $data)
 <div class="visskopa">
             <div class="usernmae"></div>
-            <div class="imgbox"></div>
+            <div class="imgbox"><img src="{{ asset('images/' . $data->image_path) }}" alt=""></div>
             <div class="undertext">
                 <div class="emote">
                         <a href="url"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">

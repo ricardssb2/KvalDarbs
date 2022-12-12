@@ -29,11 +29,24 @@ class PostController extends Controller
 
     public function create_posts(Request $request)
     {   
-        
+
+        $request->validate([
+            'product_name' => 'required',
+            'product_price'=>'required',
+            'product_description'=>'required',
+            'image' => 'required|mimes:jpg,png,jpeg|max:5048'
+        ]);
+
+        $newImageName = time() . '-' . $request->product_name . '.' . 
+        $request->image->extension();
+
+        $request->image->move(public_path('images'), $newImageName);
+
         $post = new CreatePost;
         $post->product_name = $request->product_name;
         $post->product_price = $request->product_price;
         $post->product_description = $request->product_description;
+        $post->image_path = $newImageName;
         $post->author_id = Auth::user()->id;
         $post->save();
         return redirect('feed')->with('status', 'Blog Post Form Data Has Been inserted');
