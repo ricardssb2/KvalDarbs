@@ -16,7 +16,7 @@ class CreateCreatePostsTable extends Migration
         Schema::create('create_posts', function (Blueprint $table) {
             $table->id();
             $table->string('product_name', 64);
-            $table->float('product_price');
+            $table->integer('product_price');
             $table->string('product_description');
             $table->unsignedBigInteger('author_id');
             $table->timestamps();
