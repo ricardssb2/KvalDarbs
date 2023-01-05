@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Artly') }}</title>
+    <title>{{ config('', 'Artly') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -31,7 +31,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/feed') }}">
-                    {{ config('app.name','Pickly') }}
+                    {{ config('','Artly') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -60,13 +60,12 @@
                             @endif
                         @else
                         <div class="cart-but">
-                            <a class="button" href="#popup1"><svg style="margin-top:8px;"  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-cart2" viewBox="0 0 16 16">
-                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
-                              </svg></a>
+                            <a class="button" href="#popup1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                            </svg></a>
                         </div>
                         <div class="box-but">
-                            <i class="fa fa-shopping-cart"></i>
-                            Cart ({{ \Gloudemans\Shoppingcart\Facades\Cart::content()->count() }})
+                            <a class="button" href="cart">Cart({{ \Gloudemans\Shoppingcart\Facades\Cart::content()->count() }})</a>
                         </div>
                             <div id="popup1" class="overlay">
                                 <div class="popup">
@@ -105,7 +104,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">  
-                                    <a class="dropdown-item" href="{{ route('home') }}">Profile</a>
+                                    <a class="dropdown-item" href="/home">Profile</a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -123,7 +122,9 @@
                 </div>
             </div>
         </nav>
-
+        @if (session()->has('status') )
+            <div class="alert alert-success">{{ session()->get('status') }}</div>
+        @endif
         <main class="py-4">
             @yield('content')
         </main>

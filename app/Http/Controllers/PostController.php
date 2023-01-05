@@ -49,11 +49,19 @@ class PostController extends Controller
         $post->image_path = $newImageName;
         $post->author_id = Auth::user()->id;
         $post->save();
-        return redirect('feed')->with('status', 'Blog Post Form Data Has Been inserted');
+        return redirect('feed')->with('status', 'Your artwork has been added.');
     }
 
     public function imageUpload()
     {
         return view('feed');
+    }
+
+    public function  DeletePost($id)
+    {
+        $postdelete = CreatePost::where('id', $id)->delete();
+
+        return redirect('home');
+
     }
 }

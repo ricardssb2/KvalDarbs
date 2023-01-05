@@ -17,9 +17,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//user home
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('home', function (){
+    $user_post = DB::table('create_posts')->get();
+    return view('home',['user_post' => $user_post]);
+});
+Route::get('post.delete/{id}', [App\Http\Controllers\PostController::class, 'DeletePost']);
 
+
+
+//feed 
 Route::get('/feed', [App\Http\Controllers\FeedController::class, 'index'])->name('feed');
+Route::get('feed', function (){
+    $feed_list = DB::table('create_posts')->get();
+    return view('feed',['feed_list' => $feed_list]);
+});
+
 
 //Lai izveidotu cart 
 Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
@@ -31,8 +45,4 @@ Route::delete('/cart/remove/{product}', [App\Http\Controllers\CartController2::c
 Route::get('/post', [App\Http\Controllers\PostController::class, 'index']);
 Route::post('/newpost', [App\Http\Controllers\PostController::class, 'create_posts']);
 
-Route::get('feed', function (){
-    $feed_list = DB::table('create_posts')->get();
-    return view('feed',['feed_list' => $feed_list]);
-});
 

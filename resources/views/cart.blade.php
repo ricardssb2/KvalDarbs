@@ -10,7 +10,6 @@
             @if (session()->has('msg') )
 
                 <div class="alert alert-success">{{ session()->get('msg') }}</div>
-
             @endif
             <div class="row">
             @foreach($cart as $cart)
@@ -54,7 +53,6 @@
         <div class="proceed">
             <div class="subtotal">
                 <p>Item(s) total:  <u><?php echo Cart::initial(); ?></u></p>
-                <p>Discount:  <u><?php echo Cart::discount(); ?></u></p>
                 <p>SUBTOTAL:  <u><?php echo Cart::subtotal(); ?></u></p>
             </div>
             <div class="poga-end">

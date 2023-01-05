@@ -77,7 +77,35 @@
 
 }
 
-.cart-but{
-  padding-right:20px;
+
+
+
+
+/*Cart Poga*/
+
+.box-but{
+  margin-top:8px
 }
 
+.box-but a{
+  color:black
+}
+
+.box-but a:hover{
+  color:gray;
+}
+
+/*add post*/
+
+.cart-but{
+  padding-right:20px;
+  margin-top:12px;
+}
+
+.cart-but a{
+  color:black
+}
+
+.cart-but a:hover{
+  color:gray;
+}
