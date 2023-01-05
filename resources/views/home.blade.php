@@ -7,6 +7,7 @@
   <div class="row">
     <div class="col-lg-3  kreisa">
       <div class="avatarphoto">
+        
       </div>
       <div class="vards">
 

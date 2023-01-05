@@ -56,7 +56,7 @@
                 <p>SUBTOTAL:  <u><?php echo Cart::subtotal(); ?></u></p>
             </div>
             <div class="poga-end">
-                <button type="button" class="btn btn-dark">Success</button>
+                <a href="checkout" type="button" class="btn btn-dark">Success</a>
             </div>
         </div>
     </div>

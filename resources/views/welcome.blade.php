@@ -13,13 +13,13 @@
        <div class="col-5">
          <div class="tekstcont">
              <div class="teksts">
-                 <h1>Get your First<br>Artpiece for <Br><u>50% off</u></h1>
-                     <p>Best place to sell & buy artwork.</p>
+                 <h1>Artly</h1>
+                     <p>place to sell & buy artwork.</p>
              </div>
              @guest
              @if (Route::has('register'))
              <div class="poga">
-                   <a class="button button5 "href="{{ route('register') }}">Get started!</a>
+                   <a href="{{ route('register') }}" type="button" class="btn btn-dark">Get Started</a>
              </div>
              @endif
              @endguest
