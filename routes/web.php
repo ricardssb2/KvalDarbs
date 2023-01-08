@@ -19,13 +19,15 @@ Route::get('/', function () {
 
 //user home
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('home', function (){
-    $user_post = DB::table('create_posts')->get();
-    return view('home',['user_post' => $user_post]);
-});
 Route::get('post.delete/{id}', [App\Http\Controllers\PostController::class, 'DeletePost']);
 
 
+//user post
+Route::get('/userpost', [App\Http\Controllers\UserPostController::class, 'index'])->name('userpost');
+Route::get('userpost', function (){
+    $user_post = DB::table('create_posts')->get();
+    return view('userpost',['user_post' => $user_post]);
+});
 
 //feed 
 Route::get('/feed', [App\Http\Controllers\FeedController::class, 'index'])->name('feed');

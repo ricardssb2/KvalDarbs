@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\CreatePost;
 use Auth;
+use App\Models\CreatePost;
+
 
 class HomeController extends Controller
 {
@@ -25,8 +26,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
 
-        return view('home');
+        return view('home', compact('user'));
     }
 
 }

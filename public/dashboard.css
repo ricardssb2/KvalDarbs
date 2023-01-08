@@ -8,7 +8,7 @@
 
 .virsraksts h1{
     font-size:30px;
-    margin-top:50px;
+    margin-top:20px;
     text-align:center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -31,6 +31,18 @@
 }
 
 
-.kreisa{
+.kreisa h1{
+    font-size:30px;
+    margin-top:20px;
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
 
+.kreisa p{
+    font-size:20px;
+    margin-top:20px;
+    text-align:left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
