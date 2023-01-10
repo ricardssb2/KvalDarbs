@@ -3,6 +3,7 @@
 @section('content')
 @include ('Sort')
             @foreach($feed_list as $key => $data)
+            @if($data->product_category == 3)
 <div class="visskopa">
             <div class="usernmae"></div>
             <div class="imgbox"><img src="{{ asset('images/' . $data->image_path) }}" alt=""></div>
@@ -35,6 +36,7 @@
               </form>
             </div>
 </div>
+        @endif
           @endforeach
 @endsection
 

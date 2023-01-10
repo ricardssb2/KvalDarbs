@@ -35,7 +35,26 @@ Route::get('feed', function (){
     $feed_list = DB::table('create_posts')->get();
     return view('feed',['feed_list' => $feed_list]);
 });
+//expr sort
+Route::get('/expr', [App\Http\Controllers\ExprController::class, 'index'])->name('expr');
+Route::get('expr', function (){
+    $feed_list = DB::table('create_posts')->get();
+    return view('expr',['feed_list' => $feed_list]);
+});
 
+//op sort
+Route::get('/op', [App\Http\Controllers\OpController::class, 'index'])->name('op');
+Route::get('op', function (){
+    $feed_list = DB::table('create_posts')->get();
+    return view('op',['feed_list' => $feed_list]);
+});
+
+//pop sort
+Route::get('/pop', [App\Http\Controllers\PopController::class, 'index'])->name('pop');
+Route::get('pop', function (){
+    $feed_list = DB::table('create_posts')->get();
+    return view('pop',['feed_list' => $feed_list]);
+});
 
 //Lai izveidotu cart 
 Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart');

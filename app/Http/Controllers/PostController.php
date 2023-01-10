@@ -34,6 +34,7 @@ class PostController extends Controller
             'product_name' => 'required',
             'product_price'=>'required',
             'product_description'=>'required',
+            'product_category'=>'required',
             'image' => 'required|mimes:jpg,png,jpeg|max:5048'
         ]);
 
@@ -46,6 +47,7 @@ class PostController extends Controller
         $post->product_name = $request->product_name;
         $post->product_price = $request->product_price;
         $post->product_description = $request->product_description;
+        $post->product_category = $request->product_category;
         $post->image_path = $newImageName;
         $post->author_id = Auth::user()->id;
         $post->save();
@@ -61,7 +63,7 @@ class PostController extends Controller
     {
         $postdelete = CreatePost::where('id', $id)->delete();
 
-        return redirect('home');
+        return redirect('userpost');
 
     }
 }

@@ -90,6 +90,15 @@
                                                 <label for="exampleFormControlTextarea1">Art Description</label>
                                                 <textarea class="form-control description" id="exampleFormControlTextarea1" name="product_description" rows="3"></textarea>
                                                 </div>
+                                                <div class="form-group">
+                                                <label for="exampleFormControlTextarea1">Art Category</label>
+                                                <select  class="form-control category" name="product_category" id="exampleFormControlTextarea1">
+                                                        <option value="1">Other</option>
+                                                        <option value="2">Cars</option>
+                                                        <option value="3">Birds</option>
+                                                        <option value="4">Planes</option>
+                                                </select>
+                                                </div>
                                             </div>
                                             <div class="submit">
                                                 <button type="submit" class="btn btn-primary">Submit</button>

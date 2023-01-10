@@ -8,7 +8,6 @@
     <div class="col-lg-9 tests2">
         <div class="container order-card">
             @if (session()->has('msg') )
-
                 <div class="alert alert-success">{{ session()->get('msg') }}</div>
             @endif
             <div class="row">

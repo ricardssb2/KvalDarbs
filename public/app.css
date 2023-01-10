@@ -32,7 +32,7 @@
   }
   
   .popup h2 {
-    margin-top: 0;
+    margin-top: 30px;
     color: #333;
     font-family: Tahoma, Arial, sans-serif;
   }
@@ -50,7 +50,7 @@
     color: #06D85F;
   }
   .popup .content {
-    max-height: 70%;
+    max-height: 100%;
     overflow: auto;
   }
   

@@ -11,10 +11,10 @@
             <a href="{{url('post.delete/'.$data->id)}}" type="button" class="btn btn-danger">Delete</a>
           </div>
         </div>
-        <div class="back">
-          <a href="home" type="button" class="btn btn-dark">Back</a>
-        </div>
       @endif
     @endforeach
+    <div class="back">
+          <a href="home" type="button" class="btn btn-dark">Back</a>
+     </div>
 
 @endsection
